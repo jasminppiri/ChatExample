@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MSGChatExampleInputView" customModule="ChatExample" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="MSGChatExampleInputView" customModule="ChatExample" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="434" height="50"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eQZ-xx-JWZ" customClass="MSGPlaceholderTextView" customModule="ChatExample" customModuleProvider="target">
+                    <rect key="frame" x="20" y="5" width="339" height="40"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vdz-Hj-ali" customClass="DesignableButton" customModule="ChatExample" customModuleProvider="target">
+                    <rect key="frame" x="374" y="5" width="40" height="40"/>
+                    <color key="backgroundColor" red="0.0" green="0.63529411764705879" blue="0.47450980392156861" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="1iT-1T-rY1"/>
+                        <constraint firstAttribute="width" constant="40" id="Abs-TK-YUZ"/>
+                        <constraint firstAttribute="width" constant="30" id="nvs-kn-Rzw"/>
+                    </constraints>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <state key="normal" image="camera.fill" catalog="system"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="10"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="nvs-kn-Rzw"/>
+                        </mask>
+                    </variation>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="grt-NM-bT7" customClass="MSGChatExampleSendButton" customModule="ChatExample" customModuleProvider="target">
+                    <rect key="frame" x="319" y="5" width="40" height="40"/>
+                    <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="40" id="4Nz-WB-Iy3"/>
+                        <constraint firstAttribute="height" constant="40" id="K7Y-MP-VjE"/>
+                    </constraints>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
+                    <state key="normal" image="Outgoing Tail Bubble"/>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="grt-NM-bT7" firstAttribute="trailing" secondItem="eQZ-xx-JWZ" secondAttribute="trailing" id="70Z-K4-QRm"/>
+                <constraint firstItem="grt-NM-bT7" firstAttribute="bottom" secondItem="eQZ-xx-JWZ" secondAttribute="bottom" id="8Zc-h9-7pd"/>
+                <constraint firstItem="eQZ-xx-JWZ" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="PRK-v3-aI1"/>
+                <constraint firstItem="eQZ-xx-JWZ" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="5" id="SJn-PA-lEg"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="vdz-Hj-ali" secondAttribute="trailing" constant="20" id="j4N-ei-AFT"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="eQZ-xx-JWZ" secondAttribute="bottom" constant="5" id="otT-xC-aHz"/>
+                <constraint firstItem="vdz-Hj-ali" firstAttribute="bottom" secondItem="eQZ-xx-JWZ" secondAttribute="bottom" id="qEg-cb-BPq"/>
+                <constraint firstItem="vdz-Hj-ali" firstAttribute="leading" secondItem="eQZ-xx-JWZ" secondAttribute="trailing" constant="15" id="vWl-Hb-10W"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="sendButton" destination="grt-NM-bT7" id="gXA-SH-Ei5"/>
+                <outlet property="textView" destination="eQZ-xx-JWZ" id="r2d-pM-wGX"/>
+            </connections>
+            <point key="canvasLocation" x="16" y="-246.47676161919043"/>
+        </view>
+    </objects>
+    <designables>
+        <designable name="grt-NM-bT7">
+            <size key="intrinsicContentSize" width="53" height="43"/>
+        </designable>
+        <designable name="vdz-Hj-ali">
+            <size key="intrinsicContentSize" width="24.5" height="22"/>
+        </designable>
+    </designables>
+    <resources>
+        <image name="Outgoing Tail Bubble" width="33" height="23"/>
+        <image name="camera.fill" catalog="system" width="128" height="94"/>
+    </resources>
+</document>
