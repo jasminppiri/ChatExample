@@ -24,6 +24,30 @@ class ChatViewController: MSGMessengerViewController {
         super.viewDidLoad()
         dataSource = self
         delegate = self
+        navigationController?.navigationBar.isHidden = true
+    }
+    
+    func refresh() {
+        messages = chatList?.messages ?? []
+        collectionView.reloadData()
+        if let view = self.view as? MSGMessengerView,
+           let chatHeaderView = view.headerContainer.subviews.first(where: { return $0 is ChatHeaderView}) as? ChatHeaderView {
+            chatHeaderView.collectionView.isHidden = !(chatList?.isGroup ?? false)
+            chatHeaderView.headerView.isHidden = chatList?.isGroup ?? false
+            chatHeaderView.senderNameLabel.text = User.steve.displayName
+            chatHeaderView.receiverNameLabel.text = chatList?.users.first?.displayName
+            chatHeaderView.senderImageView.image = User.steve.avatar
+            chatHeaderView.receiverImageView.image = chatList?.users.first?.avatar
+            chatHeaderView.users = chatList?.users ?? []
+            chatHeaderView.onTap = {
+                guard self.chatList?.isGroup ?? false else {
+                    return
+                }
+                let groupDetailViewController = self.storyboard?.instantiateViewController(withIdentifier: "GroupDetailViewController") as! GroupDetailViewController
+                groupDetailViewController.users = self.chatList?.users ?? []
+                self.navigationController?.pushViewController(groupDetailViewController, animated: true)
+            }
+        }
     }
     
     override func loadView() {

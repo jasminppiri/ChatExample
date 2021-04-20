@@ -17,6 +17,7 @@ class ChatListViewController: UIViewController {
         super.viewDidLoad()
         nameLabel.text = User.steve.displayName
         userImageView.image = User.steve.avatar
+        navigationController?.navigationBar.isHidden = true
     }
 
 }
@@ -49,6 +50,10 @@ extension ChatListViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard indexPath.row > 0 else {
+            return
+        }
+        guard UIDevice.current.userInterfaceIdiom != .pad else {
+            NotificationCenter.default.post(name: Notification.Name("RefreshDetail"), object: nil, userInfo: ["index" : (indexPath.row - 1)])
             return
         }
         let chatViewController = self.storyboard?.instantiateViewController(withIdentifier: "ChatViewController") as! ChatViewController

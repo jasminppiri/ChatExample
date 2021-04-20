@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="DtO-2Q-h8A">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ps9-fC-7ge">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -654,6 +654,18 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zdk-az-fLG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="68.115942028985515" y="75.669642857142847"/>
+        </scene>
+        <!--Split View Controller-->
+        <scene sceneID="j6h-m2-ks2">
+            <objects>
+                <splitViewController storyboardIdentifier="SplitViewController" allowDoubleColumnStyle="YES" preferredDisplayMode="beside" behavior="tile" id="ps9-fC-7ge" customClass="SplitViewController" customModule="ChatExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <connections>
+                        <segue destination="DtO-2Q-h8A" kind="relationship" relationship="compactViewController" id="Va6-6h-WBe"/>
+                    </connections>
+                </splitViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JUc-ZX-R40" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1799" y="74"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="BAP-BB-scX">

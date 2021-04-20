@@ -68,6 +68,7 @@
 		A17FB8982620884A0082C2A9 /* KeyboardFrameObserversManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A17FB859262088490082C2A9 /* KeyboardFrameObserversManager.swift */; };
 		A17FB8A726208B240082C2A9 /* Emoji.swift in Sources */ = {isa = PBXBuildFile; fileRef = A17FB8A626208B240082C2A9 /* Emoji.swift */; };
 		A17FB8AE2620B1A50082C2A9 /* ChatListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A17FB8AD2620B1A50082C2A9 /* ChatListViewController.swift */; };
+		A1832B29262F562B00078A6A /* SplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1832B28262F562B00078A6A /* SplitViewController.swift */; };
 		A1C00E632628F19E001640F3 /* MockMessages.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C00E622628F19E001640F3 /* MockMessages.swift */; };
 		A1C00E672628F1D7001640F3 /* ChatListFavouriteCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C00E662628F1D7001640F3 /* ChatListFavouriteCollectionViewCell.swift */; };
 		A1C00E6A2628F1FF001640F3 /* ChatListFavouriteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C00E692628F1FF001640F3 /* ChatListFavouriteTableViewCell.swift */; };
@@ -146,6 +147,7 @@
 		A17FB859262088490082C2A9 /* KeyboardFrameObserversManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardFrameObserversManager.swift; sourceTree = "<group>"; };
 		A17FB8A626208B240082C2A9 /* Emoji.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Emoji.swift; sourceTree = "<group>"; };
 		A17FB8AD2620B1A50082C2A9 /* ChatListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListViewController.swift; sourceTree = "<group>"; };
+		A1832B28262F562B00078A6A /* SplitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplitViewController.swift; sourceTree = "<group>"; };
 		A1C00E622628F19E001640F3 /* MockMessages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockMessages.swift; sourceTree = "<group>"; };
 		A1C00E662628F1D7001640F3 /* ChatListFavouriteCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListFavouriteCollectionViewCell.swift; sourceTree = "<group>"; };
 		A1C00E692628F1FF001640F3 /* ChatListFavouriteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListFavouriteTableViewCell.swift; sourceTree = "<group>"; };
@@ -427,6 +429,7 @@
 			isa = PBXGroup;
 			children = (
 				A17FB802262088490082C2A9 /* MessengerKit */,
+				A1832B28262F562B00078A6A /* SplitViewController.swift */,
 				A17FB7F12620882C0082C2A9 /* ChatViewController.swift */,
 				A173CE312621FC8C006CED62 /* ChatHeaderView.swift */,
 				A173CE2E2621FC77006CED62 /* ChatHeaderView.xib */,
@@ -603,6 +606,7 @@
 				A17FB8792620884A0082C2A9 /* MSGChatExampleFooterView.swift in Sources */,
 				A17FB8752620884A0082C2A9 /* MSGSectionReusableViewDelegate.swift in Sources */,
 				A17FB86C2620884A0082C2A9 /* MSGChatExampleCollectionView.swift in Sources */,
+				A1832B29262F562B00078A6A /* SplitViewController.swift in Sources */,
 				A17FB8882620884A0082C2A9 /* MSGMessage.swift in Sources */,
 				A17FB8832620884A0082C2A9 /* MSGChatExampleInputView.swift in Sources */,
 				A1C00E862628F880001640F3 /* DesignableImageView.swift in Sources */,
